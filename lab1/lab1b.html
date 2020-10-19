@@ -28,7 +28,75 @@
 <p><script>
     let tab2 = ['Adrian', 'Szymon', 'Kamil', 'Sebastian', 'Romek', 'Artur'];
 
-    document
+    document.write('<p>Pierwszy element to <strong>');
+    document.write(tab2[0] + '</strong></p>');
+
+    document.write(tab2[tab2.length-1]);
+    tab2.unshift('Antoni');
+    document.write('<p>Pierwszy element to <strong>');
+    document.write(tab2[0] + '</strong></p>');
+
+    let formsCounter = document.forms.length;
+    document.write(formsCounter + ' = Ilość formularzy na stronie');
+
+
 </script></p>
+
+<p><script>
+    let pCounter = document.getElementsByTagName("p").length;
+    document.write(pCounter + ' = Ilość akapitów na stronie')
+</script></p>
+
+<p id="nazwisko" onclick="myFunciton()">Naciśnij na mnie aby wyświetlić nazwisko</p>
+
+<p id="akapitAuto"><script>
+    document.write(cars[2]);
+</script></p>
+
+<p id="akapitImie"><script>
+    document.write(tab2[3] + ' - Czwarty element tablicy tab2');
+</script></p>
+
+<script>
+    function myFunciton() {
+        document.getElementById("nazwisko").innerHTML = "Kleyna";
+    }
+</script>
+
+<div>
+    <p>
+        Pętla while
+
+        <script>
+            while(warunek) {
+                //kod
+            }
+        </script>
+    </p>
+
+    <p>
+        Pętla for
+        </br>
+        <script>
+            for(let i=0; i < tab2.length/2; i++) {
+                document.write(tab2[i] + "<br>");
+            }
+        </script>
+    </p>
+</div>
+
+<div>
+    <p id="button">
+        <button type="button" onclick="funkcjaDane()">Naciśnij Mnie</button>
+    </p>
+
+    <p id="dane">  </p>
+
+    <script>
+        function funkcjaDane() {
+            document.getElementById("dane").innerHTML = "Adrian Kleyna <br> 15904 IIS"
+        }
+    </script>
+</div>
 </body>
 </html>
