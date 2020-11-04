@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body id="webbody">
 
 <!-- navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -42,7 +42,7 @@
                     class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.html"><img src="img/logoPWSZ.png"
-                                                  height="40" alt=""></a> <a class="navbar-brand logotext" href="#">PWSZ
+                                                           height="40" alt=""></a> <a class="navbar-brand logotext" href="#">PWSZ
             Lab</a>
         </div>
 
@@ -124,123 +124,69 @@
 </section>
 <!-- /container -->
 
-<section id="projekt1">
+<section id="projekt2">
     <div class="container">
         <div class="jumbotron">
-            <h1>Projekt 1</h1>
+            <h2>Lab3</h2>
 
-            <p id="firstP"></p>
-            <p id="secondP"></p>
-            <button onclick="myInfo()">Informacje</button>
+            <span class="pq">Darowanemu koniowi w zęby się nie zagląda</span>
+            <p class="">Im się jest szczęśliwszym, tym mniej uwagi poświęca się własnemu szczęściu.</p>
+            <span class="pq">Szczęście, które posiadasz jest jak ziarno; szczęście, które dzielisz – to kwiat.</span>
+            <p class="">Zwyciężonym łaskę okażcie, to ją przyjmą z wdzięcznością i pamiętać będą; u zwycięzców w pogardę tylko pójdziecie.</p>
+            <p class="">Mości panowie! gdybym zaczął wszystko szczegółowie opowiadać, tedy i dziesięciu nocy by nie starczyło, a pewnie i miodu, bo stare gardło jak stary wóz smarować trzeba.</p>
 
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Some text in the Modal..</p>
-                </div>
+            <a href="https://www.w3schools.com" id="link">Odnośnik W3SCHOOLS</a>
+            <br>
 
+            <section id="main">
 
-<!--                let cars = ['BMW', 'Audi', 'Subaru', 'Nissan', 'Infinity', 'Toyota', 'Lexus'];-->
+            </section>
 
-<!--                //alert(cars[3]);-->
-<!--                cars[cars.length-1] = 'Dacia';-->
-<!--                //alert(cars[cars.length-1]);-->
-<!--                cars[cars.length] = 'nowy samochod'-->
-<!--                //alert(cars[cars.length-1]);-->
+            <section id="form">
+                <br>
+                <form>
+                    <button style="font-size: 24px;" type="button" class="btn btn-info show-page modal-btn"
+                            data-page="one" data-dismiss="modal" aria-hidden="true" id="firstButton">1. Kliknij mnie!</button>
+                    <br><br>
+                    <button style="font-size: 24px;" type="button" class="btn btn-info show-page modal-btn"
+                            data-page="one" data-dismiss="modal" aria-hidden="true" id="secondButton">2. Guziczek</button>
+                </form>
+            </section>
 
-<!--                cars.push('nowy1', 'nowy2', 'nowy3');-->
-<!--                cars.unshift('Tata', 'Tesla');-->
+            <script>
+                $(document).ready(function() {
+                    $('span.pq').each(function() {
+                        var quote=$(this).clone();
+                        quote.removeClass('pq');
+                        quote.addClass('pullquote');
+                        $(this).before(quote);
+                    }); // koniec funkcji each
+                }); // koniec funkcji ready
+            </script>
 
-<!--                let totalItems = cars.push();-->
-<!--                //alert(totalItems);-->
+            <script>
+                $("#webbody").dblclick(function () {
+                    alert("Wykonano podwójny klik")
+                })//koniec funkcji
+            </script>
 
-<!--                let removeItems = cars.pop(2);-->
-<!--                //alert(removeItems);-->
-<!--                </script></p>-->
+            <script>
+                $("#link").mouseover(function () {
+                    varmessage = "<p>Wskazałeś odnśnik mysza!</p>"
+                    $('#main').append(varmessage);
+                })//koniec funkcji
+            </script>
 
-<!--                <p><script>-->
-<!--                    let tab2 = ['Adrian', 'Szymon', 'Kamil', 'Sebastian', 'Romek', 'Artur'];-->
+            <script>
+                $("#firstButton").click(function () {
+                $(this).text("Zostałem klikniety");
+                })//koniec funkcji
 
-<!--                    document.write('<p>Pierwszy element to <strong>');-->
-<!--                document.write(tab2[0] + '</strong></p>');-->
+                $("#secondButton").click(function () {
+                    $("#webbody").backgroundColor(red);
+                })//koniec funkcji
+            </script>
 
-<!--                document.write(tab2[tab2.length-1]);-->
-<!--                tab2.unshift('Antoni');-->
-<!--                document.write('<p>Pierwszy element to <strong>');-->
-<!--                document.write(tab2[0] + '</strong></p>');-->
-
-<!--                let formsCounter = document.forms.length;-->
-<!--                document.write(formsCounter + ' = Ilość formularzy na stronie');-->
-
-
-<!--                </script></p>-->
-
-<!--                <p><script>-->
-<!--                    let pCounter = document.getElementsByTagName("p").length;-->
-<!--                    document.write(pCounter + ' = Ilość akapitów na stronie')-->
-<!--                </script></p>-->
-
-<!--                <p id="nazwisko" onclick="myFunciton()">Naciśnij na mnie aby wyświetlić nazwisko</p>-->
-
-<!--                <p id="akapitAuto"><script>-->
-<!--                    document.write(cars[2]);-->
-<!--                </script></p>-->
-
-<!--                <p id="akapitImie"><script>-->
-<!--                    document.write(tab2[3] + ' - Czwarty element tablicy tab2');-->
-<!--                </script></p>-->
-
-<!--                <script>-->
-<!--                    function myFunciton() {-->
-<!--                    document.getElementById("nazwisko").innerHTML = "Kleyna";-->
-<!--                    }-->
-<!--                </script>-->
-
-<!--                <div>-->
-
-<!--                <p>-->
-<!--                Pętla for-->
-<!--                    </br>-->
-<!--                <script>-->
-<!--                for(let i=0; i < tab2.length/2; i++) {-->
-<!--                    document.write(tab2[i] + "<br>");-->
-<!--                }-->
-<!--                </script>-->
-<!--                </p>-->
-<!--            </div>-->
-
-<!--            <div>-->
-<!--                <p id="button">-->
-<!--                    <button type="button" onclick="funkcjaDane()">Naciśnij Mnie</button>-->
-<!--                </p>-->
-
-<!--                <p id="dane">  </p>-->
-
-<!--                <script>-->
-<!--                    function funkcjaDane() {-->
-<!--                        document.getElementById("dane").innerHTML = "Adrian Kleyna <br> 15904 IIS"-->
-<!--                    }-->
-<!--                </script>-->
-
-
-                <script>
-                    document.getElementById("nazwisko").innerHTML = "Kleyna";
-                    document.getElementById("imie").innerHTML = "Adrian";
-                    document.getElementById("grupa").innerHTML = "2";
-                    document.getElementById("email").innerHTML = "15904@student.pwsz.elblag.pl";
-                    document.getElementById("nrindeksu").innerHTML = "15904";
-
-
-                    function myInfo() {
-                        alert("Imię: " + document.getElementById("imie").innerHTML
-                            + "\nNazwisko: " + document.getElementById("nazwisko").innerHTML
-                            + "\nGrupa: " + document.getElementById("grupa").innerHTML
-                            + "\nEmail: " + document.getElementById("email").innerHTML
-                            + "\nNumer indeksu: " + document.getElementById("nrindeksu").innerHTML)
-                    }
-
-                </script>
-            </div>
         </div>
     </div>
 </section>
@@ -248,8 +194,7 @@
 <footer>
     <div class="container" style="margin-top: 5%">
         <button type="button" class="btn btn-link" data-toggle="modal"
-                data-target="#myModal">Polityka prywatności
-        </button>
+                data-target="#myModal">Polityka prywatności</button>
     </div>
 </footer>
 
@@ -267,8 +212,7 @@
             <div class="modal-body">polityka prywatności...</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default btn-warning btn-sm"
-                        data-dismiss="modal">Close
-                </button>
+                        data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -302,7 +246,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <input type="text" class="form-control " id="contactName"
-                                           aria-describedby="inputSuccess5Status" onblur="checkName()"/>
+                                           aria-describedby="inputSuccess5Status" onblur="checkName()" />
                                     <span class="hide" aria-hidden="true" id="true"></span> <span
                                         id="inputSuccess5Status" class="sr-only">(success)</span>
                                 </div>
@@ -321,8 +265,8 @@
                                 <div class="col-md-4">
                                     <input type="text" class="form-control " id="contactLastName"
                                            aria-describedby="inputSuccess5Status"
-                                           onblur="checkLastName()"/> <span class="hide"
-                                                                            aria-hidden="true" id="true2"></span> <span
+                                           onblur="checkLastName()" /> <span class="hide"
+                                                                             aria-hidden="true" id="true2"></span> <span
                                         id="inputSuccess5Status2" class="sr-only">(success)</span>
                                 </div>
                             </div>
@@ -340,7 +284,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <input type="text" class="form-control " id="contactEmail"
-                                           aria-describedby="inputSuccess5Status" onblur="checkEmail()"/>
+                                           aria-describedby="inputSuccess5Status" onblur="checkEmail()" />
                                     <span class="hide" aria-hidden="true" id="true3"></span> <span
                                         id="inputSuccess5Status3" class="sr-only">(success)</span>
                                 </div>
@@ -359,7 +303,7 @@
                             <div class="row ">
                                 <div class="col-md-2"></div>
                                 <div class="col-md-3">
-                                    <input class="btn btn-primary" type="submit" value="Wyślij"/>
+                                    <input class="btn btn-primary" type="submit" value="Wyślij" />
                                 </div>
                             </div>
                         </fieldset>
@@ -368,8 +312,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default btn-warning btn-sm"
-                        data-dismiss="modal">Close
-                </button>
+                        data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

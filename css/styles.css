@@ -14,3 +14,22 @@
     padding: 15px;
     width: auto;
 }
+
+.pullquote {
+    color: #3c763d ;
+    font-size: large;
+    font-style: italic;
+}
+
+.pq {
+    float: right;
+    clear: right;
+    width: 200px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: lightgray;
+    border-radius: 0.5px;
+    margin: 20px 0 10px 10px;
+    font-style: normal;
+    color: #3c763d;
+}
