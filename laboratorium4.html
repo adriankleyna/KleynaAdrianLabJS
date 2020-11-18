@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body id="webbody">
 
 <!-- navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -42,7 +42,7 @@
                     class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.html"><img src="img/logoPWSZ.png"
-                                                  height="40" alt=""></a> <a class="navbar-brand logotext" href="#">PWSZ
+                                                           height="40" alt=""></a> <a class="navbar-brand logotext" href="#">PWSZ
             Lab</a>
         </div>
 
@@ -125,163 +125,17 @@
 </section>
 <!-- /container -->
 
-<section id="Projekt1">
+<section id="Lab4">
     <div class="container">
         <div class="jumbotron">
-            <h1>Projekt 1</h1>
+            <h2>Lab4</h2>
 
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td><input type="text" id="inpucik"></td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                </tbody>
-            </table>
-
-            <p id="firstP"></p>
-            <p id="secondP"></p>
-            <button onclick="myInfo()">Informacje</button>
-
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Some text in the Modal..</p>
-                </div>
-
-
-<!--                let cars = ['BMW', 'Audi', 'Subaru', 'Nissan', 'Infinity', 'Toyota', 'Lexus'];-->
-
-<!--                //alert(cars[3]);-->
-<!--                cars[cars.length-1] = 'Dacia';-->
-<!--                //alert(cars[cars.length-1]);-->
-<!--                cars[cars.length] = 'nowy samochod'-->
-<!--                //alert(cars[cars.length-1]);-->
-
-<!--                cars.push('nowy1', 'nowy2', 'nowy3');-->
-<!--                cars.unshift('Tata', 'Tesla');-->
-
-<!--                let totalItems = cars.push();-->
-<!--                //alert(totalItems);-->
-
-<!--                let removeItems = cars.pop(2);-->
-<!--                //alert(removeItems);-->
-<!--                </script></p>-->
-
-<!--                <p><script>-->
-<!--                    let tab2 = ['Adrian', 'Szymon', 'Kamil', 'Sebastian', 'Romek', 'Artur'];-->
-
-<!--                    document.write('<p>Pierwszy element to <strong>');-->
-<!--                document.write(tab2[0] + '</strong></p>');-->
-
-<!--                document.write(tab2[tab2.length-1]);-->
-<!--                tab2.unshift('Antoni');-->
-<!--                document.write('<p>Pierwszy element to <strong>');-->
-<!--                document.write(tab2[0] + '</strong></p>');-->
-
-<!--                let formsCounter = document.forms.length;-->
-<!--                document.write(formsCounter + ' = Ilość formularzy na stronie');-->
-
-
-<!--                </script></p>-->
-
-<!--                <p><script>-->
-<!--                    let pCounter = document.getElementsByTagName("p").length;-->
-<!--                    document.write(pCounter + ' = Ilość akapitów na stronie')-->
-<!--                </script></p>-->
-
-<!--                <p id="nazwisko" onclick="myFunciton()">Naciśnij na mnie aby wyświetlić nazwisko</p>-->
-
-<!--                <p id="akapitAuto"><script>-->
-<!--                    document.write(cars[2]);-->
-<!--                </script></p>-->
-
-<!--                <p id="akapitImie"><script>-->
-<!--                    document.write(tab2[3] + ' - Czwarty element tablicy tab2');-->
-<!--                </script></p>-->
-
-<!--                <script>-->
-<!--                    function myFunciton() {-->
-<!--                    document.getElementById("nazwisko").innerHTML = "Kleyna";-->
-<!--                    }-->
-<!--                </script>-->
-
-<!--                <div>-->
-
-<!--                <p>-->
-<!--                Pętla for-->
-<!--                    </br>-->
-<!--                <script>-->
-<!--                for(let i=0; i < tab2.length/2; i++) {-->
-<!--                    document.write(tab2[i] + "<br>");-->
-<!--                }-->
-<!--                </script>-->
-<!--                </p>-->
-<!--            </div>-->
-
-<!--            <div>-->
-<!--                <p id="button">-->
-<!--                    <button type="button" onclick="funkcjaDane()">Naciśnij Mnie</button>-->
-<!--                </p>-->
-
-<!--                <p id="dane">  </p>-->
-
-<!--                <script>-->
-<!--                    function funkcjaDane() {-->
-<!--                        document.getElementById("dane").innerHTML = "Adrian Kleyna <br> 15904 IIS"-->
-<!--                    }-->
-<!--                </script>-->
-
-
-                <script>
-                    document.getElementById("nazwisko").innerHTML = "Kleyna";
-                    document.getElementById("imie").innerHTML = "Adrian";
-                    document.getElementById("grupa").innerHTML = "2";
-                    document.getElementById("email").innerHTML = "15904@student.pwsz.elblag.pl";
-                    document.getElementById("nrindeksu").innerHTML = "15904";
-
-
-                    function myInfo() {
-                        alert("Imię: " + document.getElementById("imie").innerHTML
-                            + "\nNazwisko: " + document.getElementById("nazwisko").innerHTML
-                            + "\nGrupa: " + document.getElementById("grupa").innerHTML
-                            + "\nEmail: " + document.getElementById("email").innerHTML
-                            + "\nNumer indeksu: " + document.getElementById("nrindeksu").innerHTML)
-                    }
-
-                </script>
-            </div>
-        </div>
-    </div>
-</section>
+            TEKST
 
 <footer>
     <div class="container" style="margin-top: 5%">
         <button type="button" class="btn btn-link" data-toggle="modal"
-                data-target="#myModal">Polityka prywatności
-        </button>
+                data-target="#myModal">Polityka prywatności</button>
     </div>
 </footer>
 
@@ -299,8 +153,7 @@
             <div class="modal-body">polityka prywatności...</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default btn-warning btn-sm"
-                        data-dismiss="modal">Close
-                </button>
+                        data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -334,7 +187,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <input type="text" class="form-control " id="contactName"
-                                           aria-describedby="inputSuccess5Status" onblur="checkName()"/>
+                                           aria-describedby="inputSuccess5Status" onblur="checkName()" />
                                     <span class="hide" aria-hidden="true" id="true"></span> <span
                                         id="inputSuccess5Status" class="sr-only">(success)</span>
                                 </div>
@@ -353,8 +206,8 @@
                                 <div class="col-md-4">
                                     <input type="text" class="form-control " id="contactLastName"
                                            aria-describedby="inputSuccess5Status"
-                                           onblur="checkLastName()"/> <span class="hide"
-                                                                            aria-hidden="true" id="true2"></span> <span
+                                           onblur="checkLastName()" /> <span class="hide"
+                                                                             aria-hidden="true" id="true2"></span> <span
                                         id="inputSuccess5Status2" class="sr-only">(success)</span>
                                 </div>
                             </div>
@@ -372,7 +225,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <input type="text" class="form-control " id="contactEmail"
-                                           aria-describedby="inputSuccess5Status" onblur="checkEmail()"/>
+                                           aria-describedby="inputSuccess5Status" onblur="checkEmail()" />
                                     <span class="hide" aria-hidden="true" id="true3"></span> <span
                                         id="inputSuccess5Status3" class="sr-only">(success)</span>
                                 </div>
@@ -391,7 +244,7 @@
                             <div class="row ">
                                 <div class="col-md-2"></div>
                                 <div class="col-md-3">
-                                    <input class="btn btn-primary" type="submit" value="Wyślij"/>
+                                    <input class="btn btn-primary" type="submit" value="Wyślij" />
                                 </div>
                             </div>
                         </fieldset>
@@ -400,8 +253,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default btn-warning btn-sm"
-                        data-dismiss="modal">Close
-                </button>
+                        data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
