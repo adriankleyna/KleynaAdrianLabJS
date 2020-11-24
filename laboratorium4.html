@@ -42,7 +42,8 @@
                     class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.html"><img src="img/logoPWSZ.png"
-                                                           height="40" alt=""></a> <a class="navbar-brand logotext" href="#">PWSZ
+                                                           height="40" alt=""></a> <a class="navbar-brand logotext"
+                                                                                      href="#">PWSZ
             Lab</a>
         </div>
 
@@ -62,7 +63,8 @@
                         <li><a href="laboratorium2b.html">Projekt2b_onClick</a></li>
                         <li><a href="laboratorium3.html">Projekt3</a></li>
                         <li><a href="laboratorium4.html">Projekt4</a></li>
-                    </ul></li>
+                    </ul>
+                </li>
                 <li><a href="#form" data-toggle="modal"
                        data-target="#ModalForm">Kontakt</a></li>
 
@@ -125,17 +127,434 @@
 </section>
 <!-- /container -->
 
-<section id="Lab4">
+
+<!--next container-->
+<section id="Projekt 1">
     <div class="container">
         <div class="jumbotron">
-            <h2>Lab4</h2>
 
-            TEKST
+            <table class="table table-dark">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Samochód</th>
+                    <th scope="col">Cena</th>
+                    <th scope="col">Kolor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Audi R8</td>
+                    <td>450000</td>
+                    <td class="odstep">Czerwony</td>
+                </tr>
+                <tr class="wiersz">
+                    <th scope="row">2</th>
+                    <td>Ford Mustang</td>
+                    <td>250000</td>
+                    <td>Pomarańczowy</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Subrau Impreza STI</td>
+                    <td class="odstep">150000</td>
+                    <td>Niebieski</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td class="poczatek">BMW 340i</td>
+                    <td>223000</td>
+                    <td>Czarny</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Audi TT</td>
+                    <td>59000</td>
+                    <td class="test">Żółty</td>
+                </tr>
+                <tr class="wiersz">
+                    <th scope="row">6</th>
+                    <td>Subaru BRZ</td>
+                    <td>133000</td>
+                    <td>Niebieski</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td class="poczatek">Golf VII GTI</td>
+                    <td>90000</td>
+                    <td class="test2">Czarny</td>
+                </tr>
+                <tr class="wiersz">
+                    <th scope="row">8</th>
+                    <td>Arrineria Huysaria</td>
+                    <td class="hiding" style="display: none;">35000000</td>
+                    <td class="hiding" style="display: none;">Biała perła</td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td class="poczatek">Bugatti Chiron</td>
+                    <td class="test2">17000000</td>
+                    <td>Czarny - Złoty</td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td class="test2">Koenigsegg Gemera</td>
+                    <td>8000000</td>
+                    <td><a href="#">Jasno niebieski</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <script>
+                $(document).ready(function () {
+                    let clicked1 = 0, clicked2 = 0, clicked3 = 0, clicked4 = 0
+                    clicked5 = 0, clicked6 = 0, clicked7 = 0, clicked8 = 0, clicked9 = 0, clicked10 = 0,
+                        clicked11 = 0, clicked12 = 0, clicked13 = 0, clicked14 = 0, clicked15 = 0, clicked16 = 0,
+                        clicked17 = 0, clicked18 = 0;
+
+                    $('#guzik1').click(function () {
+                        if (clicked1 == 0) {
+                            clicked1 = 1;
+
+                            $("th:first-of-type").css("background-color", "red");
+                            $('#guzik1').css("background-color", "green");
+
+
+                        } else {
+                            clicked1 = 0;
+                            $("th:first-of-type").css("background-color", "transparent");
+                            $('#guzik1').css("background-color", "#5bc0de");
+                        }
+
+                    });
+
+                    $('#guzik2').click(function () {
+                        if (clicked2 == 0) {
+                            clicked2 = 1;
+                            $("tr:odd").fadeOut(1000);
+                            $('#guzik2').css("background-color", "green");
+                        } else {
+                            clicked2 = 0;
+                            $("tr:odd").fadeIn(1000);
+                            $('#guzik2').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik3').click(function () {
+                        if (clicked3 == 0) {
+                            clicked3 = 1;
+
+                            $("tbody > tr").animate({'fontSize': '16px',}, 2000);
+                            $("tbody > tr").css("color", "red");
+                            $('#guzik3').css("background-color", "green");
+                        } else {
+                            clicked3 = 0;
+                            $("tbody > tr").animate({'fontSize': '14px'}, 2000);
+                            $('#guzik3').css("background-color", "#5bc0de");
+                            $("tbody > tr").css("color", "black");
+                        }
+                    });
+
+                    $('#guzik4').click(function () {
+                        if (clicked4 == 0) {
+                            clicked4 = 1;
+
+                            $('tbody').css("background-color", "lightseagreen");
+                            $('#guzik4').css("background-color", "green");
+                        } else {
+                            clicked4 = 0;
+                            $("tbody").css("background-color", "transparent");
+                            $('#guzik4').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik5').click(function () {
+                        if (clicked5 == 0) {
+                            clicked5 = 1;
+
+                            $("th + td").animate({'letterSpacing': '+=2px'}, 2000);
+                            $('#guzik5').css("background-color", "green");
+                        } else {
+                            clicked5 = 0;
+                            $("th + td").animate({'letterSpacing': '-=2px'}, 2000);
+                            $('#guzik5').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik6').click(function () {
+                        if (clicked6 == 0) {
+                            clicked6 = 1;
+
+                            $('td[class]').css("color", "green");
+                            $('#guzik6').css("background-color", "green");
+                        } else {
+                            clicked6 = 0;
+                            $('td[class]').css("color", "black");
+                            $('#guzik6').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik7').click(function () {
+                        if (clicked7 == 0) {
+                            clicked7 = 1;
+
+                            $('td[class="test"]').animate({'paddingTop': "+=20px"});
+                            $('#guzik7').css("background-color", "green");
+                        } else {
+                            clicked7 = 0;
+                            $('td[class="test"]').animate({'paddingTop': "-=20px"});
+                            $('#guzik7').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik8').click(function () {
+                        if (clicked8 == 0) {
+                            clicked8 = 1;
+
+                            $('td[class^="te"]').animate({'opacity': "0"});
+                            $('#guzik8').css("background-color", "green");
+                        } else {
+                            clicked8 = 0;
+                            $('td[class^="te"]').animate({'opacity': "1"});
+                            $('#guzik8').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik9').click(function () {
+                        if (clicked9 == 0) {
+                            clicked9 = 1;
+
+                            $('td[class$="tek"]').animate({'wordSpacing': "+=5px"});
+                            $('#guzik9').css("background-color", "green");
+                        } else {
+                            clicked9 = 0;
+                            $('td[class$="tek"]').animate({'wordSpacing': "-=5px"});
+                            $('#guzik9').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik10').click(function () {
+                        if (clicked10 == 0) {
+                            clicked10 = 1;
+
+                            $('td[class*="te"]').css("font-family", "'Comic Sans MS', cursive, sans-serif");
+                            $('#guzik10').css("background-color", "green");
+                        } else {
+                            clicked10 = 0;
+                            $('td[class*="te"]').css("font-family", "'Helvetica Neue',Helvetica,Arial,sans-serif");
+                            $('#guzik10').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik11').click(function () {
+                        if (clicked11 == 0) {
+                            clicked11 = 1;
+
+                            $("tr:even").fadeOut(3000);
+                            $('#guzik11').css("background-color", "green");
+                        } else {
+                            clicked11 = 0;
+                            $("tr:even").fadeIn(3000);
+                            $('#guzik11').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik12').click(function () {
+                        if (clicked12 == 0) {
+                            clicked12 = 1;
+
+                            $("tr:odd").animate({'opacity': "0"}, 3000);
+                            $('#guzik12').css("background-color", "green");
+                        } else {
+                            clicked12 = 0;
+                            $("tr:odd").animate({'opacity': "1"}, 3000);
+                            $('#guzik12').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik13').click(function () {
+                        if (clicked13 == 0) {
+                            clicked13 = 1;
+
+                            $("tr.wiersz:even").fadeOut(3000);
+                            $('#guzik13').css("background-color", "green");
+                        } else {
+                            clicked13 = 0;
+                            $("tr.wiersz:even").fadeIn(3000);
+                            $('#guzik13').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik14').click(function () {
+                        if (clicked14 == 0) {
+                            clicked14 = 1;
+
+                            $("tr:first").animate({'letterSpacing': '+=2px'}, 2000);
+                            $("tr:last").animate({'letterSpacing': '+=2px'}, 2000);
+                            $('#guzik14').css("background-color", "green");
+                        } else {
+                            clicked14 = 0;
+                            $("tr:first").animate({'letterSpacing': '-=2px'}, 2000);
+                            $("tr:last").animate({'letterSpacing': '-=2px'}, 2000);
+                            $('#guzik14').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik15').click(function () {
+                        if (clicked15 == 0) {
+                            clicked15 = 1;
+
+                            $('td:not(.test)').css("color", "yellow");
+                            $('#guzik15').css("background-color", "green");
+                        } else {
+                            clicked15 = 0;
+                            $('td:not(.test)').css("color", "black");
+                            $('#guzik15').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik16').click(function () {
+                        if (clicked16 == 0) {
+                            clicked16 = 1;
+
+                            $('td:has(a)').animate({'fontSize': '+=10px'}, 2000);
+                            $('#guzik16').css("background-color", "green");
+                        } else {
+                            clicked16 = 0;
+                            $('td:has(a)').animate({'fontSize': '-=10px'}, 2000);
+                            $('#guzik16').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik17').click(function () {
+                        if (clicked17 == 0) {
+                            clicked17 = 1;
+
+                            $('td:contains(Czarny)').css("text-decoration", "line-through");
+                            $('#guzik17').css("background-color", "green");
+                        } else {
+                            clicked17 = 0;
+                            $('td:contains(Czarny)').css("text-decoration", "none");
+                            $('#guzik17').css("background-color", "#5bc0de");
+                        }
+                    });
+
+                    $('#guzik18').click(function () {
+                        if (clicked18 == 0) {
+                            clicked18 = 1;
+
+                            $('td:hidden').show();
+                            $('#guzik18').css("background-color", "green");
+                        } else {
+                            clicked18 = 0;
+                            $('td.hiding').hide();
+                            $('#guzik18').css("background-color", "#5bc0de");
+                        }
+                    });
+                });
+            </script>
+
+        </div>
+    </div>
+</section>
+
+<section id="Projekt 2">
+    <div class="container">
+        <div class="jumbotron">
+
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik1">1. Pierwsza kolumna zostanie
+                pomalowana
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik2">2. Usunięcie nieparzystych wierszy
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik3">3. Zmiana font-size wierszy na
+                na większy i zmiana koloru czcionki
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik4">4. Zmiana tła tabeli na kolor morski
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik5">5. Zwiększenie letter spacing w
+                drugiej kolumnie
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik6">6. Zmiena koloru czcionki na zielony w komórkach o nadanej klasie
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik7">7. Zwiększa się padding-top
+                elementom z zadaną klasą
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik8">8. Znikną słowa z atrybutem class z
+                początkiem "te"
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik9">9. Zwiększenie word-spacing
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik10">10. Zmiana czcionki w komórkach której klasa zaczyna się na "te"
+            </button>
+            <br><br>
+
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik11">11. Znikają parzyste wiersze
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik12">12. Znikanie opacity - nieparzyste
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik13">13. Parzyste wiersze z zadaną klasą
+                znikają
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik14">14. Zwiększenie letter-spacing w
+                pierwszym i ostatnim wierszu
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik15">15. Zmiana koloru tekstu wybranych komórek na zielony
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik16">16. Znaczniki linku ahref powiększy się
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik17">17. Przekreślenie komórek z zawartością Czarny
+            </button>
+            <br><br>
+            <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                    data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik18">18. Pokazanie się komórek bez danych
+            </button>
+            <br><br>
+
+        </div>
+    </div>
+</section>
+
+
 
 <footer>
     <div class="container" style="margin-top: 5%">
         <button type="button" class="btn btn-link" data-toggle="modal"
-                data-target="#myModal">Polityka prywatności</button>
+                data-target="#myModal">Polityka prywatności
+        </button>
     </div>
 </footer>
 
@@ -153,7 +572,8 @@
             <div class="modal-body">polityka prywatności...</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default btn-warning btn-sm"
-                        data-dismiss="modal">Close</button>
+                        data-dismiss="modal">Close
+                </button>
             </div>
         </div>
     </div>
@@ -187,7 +607,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <input type="text" class="form-control " id="contactName"
-                                           aria-describedby="inputSuccess5Status" onblur="checkName()" />
+                                           aria-describedby="inputSuccess5Status" onblur="checkName()"/>
                                     <span class="hide" aria-hidden="true" id="true"></span> <span
                                         id="inputSuccess5Status" class="sr-only">(success)</span>
                                 </div>
@@ -206,8 +626,8 @@
                                 <div class="col-md-4">
                                     <input type="text" class="form-control " id="contactLastName"
                                            aria-describedby="inputSuccess5Status"
-                                           onblur="checkLastName()" /> <span class="hide"
-                                                                             aria-hidden="true" id="true2"></span> <span
+                                           onblur="checkLastName()"/> <span class="hide"
+                                                                            aria-hidden="true" id="true2"></span> <span
                                         id="inputSuccess5Status2" class="sr-only">(success)</span>
                                 </div>
                             </div>
@@ -225,7 +645,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <input type="text" class="form-control " id="contactEmail"
-                                           aria-describedby="inputSuccess5Status" onblur="checkEmail()" />
+                                           aria-describedby="inputSuccess5Status" onblur="checkEmail()"/>
                                     <span class="hide" aria-hidden="true" id="true3"></span> <span
                                         id="inputSuccess5Status3" class="sr-only">(success)</span>
                                 </div>
@@ -244,7 +664,7 @@
                             <div class="row ">
                                 <div class="col-md-2"></div>
                                 <div class="col-md-3">
-                                    <input class="btn btn-primary" type="submit" value="Wyślij" />
+                                    <input class="btn btn-primary" type="submit" value="Wyślij"/>
                                 </div>
                             </div>
                         </fieldset>
@@ -253,7 +673,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default btn-warning btn-sm"
-                        data-dismiss="modal">Close</button>
+                        data-dismiss="modal">Close
+                </button>
             </div>
         </div>
     </div>
