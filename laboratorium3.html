@@ -42,7 +42,8 @@
                     class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.html"><img src="img/logoPWSZ.png"
-                                                           height="40" alt=""></a> <a class="navbar-brand logotext" href="#">PWSZ
+                                                           height="40" alt=""></a> <a class="navbar-brand logotext"
+                                                                                      href="#">PWSZ
             Lab</a>
         </div>
 
@@ -62,7 +63,8 @@
                         <li><a href="laboratorium2b.html">Projekt2b_onClick</a></li>
                         <li><a href="laboratorium3.html">Projekt3</a></li>
                         <li><a href="laboratorium4.html">Projekt4</a></li>
-                    </ul></li>
+                    </ul>
+                </li>
                 <li><a href="#form" data-toggle="modal"
                        data-target="#ModalForm">Kontakt</a></li>
 
@@ -125,7 +127,7 @@
 </section>
 <!-- /container -->
 
-<section id="projekt2">
+<section class="lab3_content">
     <div class="container">
         <div class="jumbotron">
             <h2>Lab3</h2>
@@ -133,10 +135,13 @@
             <span class="pq">Darowanemu koniowi w zęby się nie zagląda</span>
             <p class="">Im się jest szczęśliwszym, tym mniej uwagi poświęca się własnemu szczęściu.</p>
             <span class="pq">Szczęście, które posiadasz jest jak ziarno; szczęście, które dzielisz – to kwiat.</span>
-            <p class="">Zwyciężonym łaskę okażcie, to ją przyjmą z wdzięcznością i pamiętać będą; u zwycięzców w pogardę tylko pójdziecie.</p>
-            <p class="">Mości panowie! gdybym zaczął wszystko szczegółowie opowiadać, tedy i dziesięciu nocy by nie starczyło, a pewnie i miodu, bo stare gardło jak stary wóz smarować trzeba.</p>
+            <p class="">Zwyciężonym łaskę okażcie, to ją przyjmą z wdzięcznością i pamiętać będą; u zwycięzców w pogardę
+                tylko pójdziecie.</p>
+            <p class="">Mości panowie! gdybym zaczął wszystko szczegółowie opowiadać, tedy i dziesięciu nocy by nie
+                starczyło, a pewnie i miodu, bo stare gardło jak stary wóz smarować trzeba.</p>
 
-            <a href="https://www.w3schools.com" id="link">Odnośnik W3SCHOOLS</a>
+            <a href="https://www.w3schools.com" id="link">Odnośnik W3SCHOOLS</a><br>
+            <a href="#">Odnosniczek </a>
             <br>
 
             <section id="main">
@@ -147,17 +152,54 @@
                 <br>
                 <form>
                     <button style="font-size: 24px;" type="button" class="btn btn-info show-page modal-btn"
-                            data-page="one" data-dismiss="modal" aria-hidden="true" id="firstButton">1. Kliknij mnie!</button>
+                            data-page="one" data-dismiss="modal" aria-hidden="true" id="firstButton">1. Kliknij mnie!
+                    </button>
                     <br><br>
                     <button style="font-size: 24px;" type="button" class="btn btn-info show-page modal-btn"
-                            data-page="one" data-dismiss="modal" aria-hidden="true" id="secondButton">2. Guziczek</button>
+                            data-page="one" data-dismiss="modal" aria-hidden="true" id="secondButton">2. Guziczek
+                    </button>
+                    <br><br>
+                    <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                            data-page="one" data-dismiss="modal" aria-hidden="true" id="btn1">1
+                    </button>
+                    <br>
+                    <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                            data-page="one" data-dismiss="modal" aria-hidden="true" id="btn2">2
+                    </button>
+                    <br>
+                    <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                            data-page="one" data-dismiss="modal" aria-hidden="true" id="btn3">3
+                    </button>
+                    <br>
+                    <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                            data-page="one" data-dismiss="modal" aria-hidden="true" id="btn4">4
+                    </button>
+                    <br>
+                    <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                            data-page="one" data-dismiss="modal" aria-hidden="true" id="btn5">5
+                    </button>
+                    <br>
+                    <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                            data-page="one" data-dismiss="modal" aria-hidden="true" id="btn6">6
+                    </button>
+                    <br>
+                    <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                            data-page="one" data-dismiss="modal" aria-hidden="true" id="btn7">7
+                    </button>
+                    <br>
+                    <button style="font-size: 16px;" type="button" class="btn btn-info show-page modal-btn"
+                            data-page="one" data-dismiss="modal" aria-hidden="true" id="btn8">8
+                    </button>
+                    <br>
+
+
                 </form>
             </section>
 
             <script>
-                $(document).ready(function() {
-                    $('span.pq').each(function() {
-                        var quote=$(this).clone();
+                $(document).ready(function () {
+                    $('span.pq').each(function () {
+                        var quote = $(this).clone();
                         quote.removeClass('pq');
                         quote.addClass('pullquote');
                         $(this).before(quote);
@@ -180,22 +222,108 @@
 
             <script>
                 $("#firstButton").click(function () {
-                $(this).text("Zostałem klikniety");
+                    $(this).text("Zostałem klikniety");
                 })//koniec funkcji
 
                 $("#secondButton").click(function () {
                     $("#webbody").css("background-color", "yellow");
-                })//koniec funkcji
+                })//koniec
+
+            </script>
+
+            <script>
+                $('#btn1').click(function () {
+                    let message = "<p>Zmiana koloru linków na zielony</p>";
+                    $('#main').append(message);
+
+                    $('a').each(function () {
+                        $(this).addClass('greenlink');
+                    });
+                    $(this).text("1 został kliknięty");
+                });
+
+                $('#btn2').click(function () {
+                    let message = "<p>Podkreślenie akapitów</p>";
+                    $('#main').append(message);
+
+                    $('p').each(function () {
+                        $(this).addClass('fontChange');
+                    });
+                    $(this).text("2 został kliknięty");
+                });
+
+                $('#btn3').click(function () {
+                    let message = "<p>Zmiana koloru tła akapitów</p>";
+                    $('#main').append(message);
+
+                    $('p').each(function () {
+                        $(this).addClass('PbackgroundColor');
+                    });
+                    $(this).text("3 został kliknięty");
+                });
+
+                $('#btn4').click(function () {
+                    let message = "<p>Zmiana tekstu akapitów na pochylony</p>";
+                    $('#main').append(message);
+
+                    $('p').each(function () {
+                        $(this).addClass('ItalicFont');
+                    });
+                    $(this).text("4 został kliknięty");
+                });
+
+                $('#btn5').click(function () {
+                    let message = "<p>Zmiana koloru i dodanie podkreślenia h2</p>";
+                    $('#main').append(message);
+
+                    $('h2').each(function () {
+                        $(this).addClass('changeH2');
+                    });
+                    $(this).text("5 został kliknięty");
+                });
+
+                $('#btn6').click(function () {
+                    let message = "<p>Zmiana koloru paska navbaru</p>";
+                    $('#main').append(message);
+
+                    $('.navbar').each(function () {
+                        $(this).addClass('NavbarColor');
+                    });
+                    $(this).text("6 został kliknięty");
+                });
+
+                $('#btn7').click(function () {
+                    let message = "<p>Zmiana koloru tła na siwy</p>";
+                    $('#main').append(message);
+
+                    $('footer > div > button').each(function () {
+                        $(this).addClass('FooterChange');
+                    });
+                    $(this).text("7 został kliknięty");
+                });
+
+                $('#btn8').click(function () {
+                    let message = "<p>Zmiana koloru tekstu spanów</p>";
+                    $('#main').append(message);
+
+                    $('span').each(function () {
+                        $(this).addClass('SpansColor');
+                    });
+                    $(this).text("8 został kliknięty");
+                });
+
             </script>
 
         </div>
     </div>
 </section>
 
+
 <footer>
     <div class="container" style="margin-top: 5%">
         <button type="button" class="btn btn-link" data-toggle="modal"
-                data-target="#myModal">Polityka prywatności</button>
+                data-target="#myModal">Polityka prywatności
+        </button>
     </div>
 </footer>
 
@@ -213,7 +341,8 @@
             <div class="modal-body">polityka prywatności...</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default btn-warning btn-sm"
-                        data-dismiss="modal">Close</button>
+                        data-dismiss="modal">Close
+                </button>
             </div>
         </div>
     </div>
@@ -247,7 +376,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <input type="text" class="form-control " id="contactName"
-                                           aria-describedby="inputSuccess5Status" onblur="checkName()" />
+                                           aria-describedby="inputSuccess5Status" onblur="checkName()"/>
                                     <span class="hide" aria-hidden="true" id="true"></span> <span
                                         id="inputSuccess5Status" class="sr-only">(success)</span>
                                 </div>
@@ -266,8 +395,8 @@
                                 <div class="col-md-4">
                                     <input type="text" class="form-control " id="contactLastName"
                                            aria-describedby="inputSuccess5Status"
-                                           onblur="checkLastName()" /> <span class="hide"
-                                                                             aria-hidden="true" id="true2"></span> <span
+                                           onblur="checkLastName()"/> <span class="hide"
+                                                                            aria-hidden="true" id="true2"></span> <span
                                         id="inputSuccess5Status2" class="sr-only">(success)</span>
                                 </div>
                             </div>
@@ -285,7 +414,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <input type="text" class="form-control " id="contactEmail"
-                                           aria-describedby="inputSuccess5Status" onblur="checkEmail()" />
+                                           aria-describedby="inputSuccess5Status" onblur="checkEmail()"/>
                                     <span class="hide" aria-hidden="true" id="true3"></span> <span
                                         id="inputSuccess5Status3" class="sr-only">(success)</span>
                                 </div>
@@ -304,7 +433,7 @@
                             <div class="row ">
                                 <div class="col-md-2"></div>
                                 <div class="col-md-3">
-                                    <input class="btn btn-primary" type="submit" value="Wyślij" />
+                                    <input class="btn btn-primary" type="submit" value="Wyślij"/>
                                 </div>
                             </div>
                         </fieldset>
@@ -313,7 +442,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default btn-warning btn-sm"
-                        data-dismiss="modal">Close</button>
+                        data-dismiss="modal">Close
+                </button>
             </div>
         </div>
     </div>

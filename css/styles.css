@@ -33,3 +33,36 @@
     font-style: normal;
     color: #3c763d;
 }
+
+.greenlink {
+    color: lime;
+}
+
+.fontChange {
+    border-bottom: 2px solid #1b6d85;
+}
+
+.PbackgroundColor {
+    background-color: lightpink;
+}
+
+.ItalicFont {
+    font-style: italic;
+}
+
+.changeH2 {
+    color: red;
+    text-decoration: underline;
+}
+
+.NavbarColor {
+    background-color: #3c763d;
+}
+
+.FooterChange {
+    background-color: lightgrey;
+}
+
+.SpansColor {
+    color: chocolate;
+}
