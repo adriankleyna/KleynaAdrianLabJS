@@ -1,2 +1,2 @@
 # KleynaAdrianLabJS
-repo laboratorium
+link do GitHubPages: https://adriankleyna.github.io/KleynaAdrianLabJS
